@@ -11,7 +11,7 @@
 @font-face {
   font-family: 'Changetime';
   src:  url('https://soritra.github.io/fonts/changetime.woff2') format('woff2'),
-        url('https://soritra.github.io/fonts/changetime.otf') format('truetype');
+        url('https://soritra.github.io/fonts/changetime.otf') format('opentype');
 }
 
 * {
