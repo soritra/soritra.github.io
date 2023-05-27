@@ -1,0 +1,249 @@
+/**
+ *
+ */
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+@font-face {
+  font-family: 'Kimberly';
+  src:  url('https://soritra.github.io/fonts/kimberly.woff2') format('woff2'),
+        url('https://soritra.github.io/fonts/kimberly.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Changetime';
+  src:  url('https://soritra.github.io/fonts/changetime.woff2') format('woff2'),
+        url('https://soritra.github.io/fonts/changetime.otf') format('truetype');
+}
+
+* {
+  font-family: 'Open Sans', arial, sans-serif;
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: center;
+}
+.header-inner .img-fluid {
+  width: 500px;
+}
+
+section.row {
+  margin: 0;
+}
+section.row article {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.container .navbar {
+  padding: .5rem 0;
+}
+.nav-inner {
+  height: 50px;
+  padding: 5px 0;
+  background: #495e57;
+  border-radius: 30px;
+}
+
+.nav-inner .navbar-nav {
+  justify-content: center;
+}
+.nav-inner .nav-item {
+  position: relative;
+  font-weight: bold;
+  margin: 0 0.2rem;
+  padding: 0 1rem;
+  border-radius: 20px;
+}
+.nav-inner .nav-item.active {
+  background: #f4ce14;
+}
+.nav-inner .nav-item .nav-link {
+  position: relative;
+  color: #fff;
+  z-index: 2;
+}
+.nav-inner .nav-item:hover .nav-link,
+.nav-inner .nav-item.active .nav-link {
+  color: #495e57;
+}
+.nav-inner .nav-item.active:hover .nav-link {
+  cursor: default;
+}
+
+.nav-inner .nav-item:before {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  left: 0px;
+  bottom: 0px;
+  content: '';
+  background: #fff;
+  opacity: 0.3;
+  transition: all 0.5s;
+  border-radius: 20px;
+  z-index: 0;
+}
+.nav-inner .nav-item:hover:before {
+  height: 100%;
+}
+.nav-inner .nav-item.active:before {
+  height: 0;
+}
+
+.banner {
+  height: 254px;
+  color: #495e57;
+  background-color: #d2eeff;
+  background-position: right 0;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+}
+.banner-home {
+  padding-right: 50%;
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  background-image: url(https://soritra.github.io/img/banner-home.png);
+  overflow: hidden;
+}
+.banner-home p {
+  font-family: kimberly;
+  font-size: 44px;
+  line-height: 32px;
+}
+.banner-home p.message {
+  font-family: unset;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 70px;
+  background-image: linear-gradient(
+    -225deg,
+    #495e57 0%,
+    #ff1361 51%,
+    #fff800 82%,
+    #f4ce14 100%
+  );
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+section.row article.col-lg-4 {
+  padding-right: 10px;
+  padding-left: 10px;  
+}
+section.row article.col-lg-4:first-child {
+  padding-right: 10px;
+  padding-left: 0;
+}
+section.row article.col-lg-4:last-child {
+  padding-right: 0;
+  padding-left: 10px;
+}
+section.row article .card {
+  min-height: 640px;
+  background: #fcf3c4;
+  border: none;
+  border-radius: 1rem;
+}
+section.row article .card-header, section.row article .card-footer {
+  background: none;
+  border: none;
+}
+section.row article .card-header:first-child {
+  border-radius: calc(1rem - 1px) calc(1rem - 1px) 0 0;
+}
+
+section.row article .card-header {
+  font-family: changetime;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 44px;
+  padding-top: 1rem;
+}
+section.row article .card-body p {
+  padding: 1rem .5rem;
+}
+
+.menu-bg {
+  height: 248px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-cover: ;
+}
+.card-menu .menu-bg {
+  background-image: url(https://soritra.github.io/img/menu-salad.jpg);
+}
+.card-booking .menu-bg {
+  background-image: url(https://soritra.github.io/img/menu-cake.jpg);
+}
+.card-opening .menu-bg {
+  background-image: url(https://soritra.github.io/img/menu-hamburger.jpg);
+}
+
+section.row article .card dl {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 0.8rem;
+}
+section.row article .card dt {
+    text-align: center;
+}
+section.row article .card dd {
+    margin-left: 0;
+}
+section.row article .card dt, section.row article .card dd {
+    padding: 0 1em;
+    border: 1px solid #495e57;
+}
+section.row article .card dt {
+    grid-row-start: 1;
+}
+
+section.row article .card-footer a {
+  position: relative;
+  text-decoration: underline;
+  padding: .5rem 1rem;
+}
+section.row article .card-footer a:hover {
+  color: #495e57;
+}
+section.row article .card-footer a:before, 
+section.row article .card-footer a:after {
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    top: 0px;
+    content: '';
+    background: #f4ce14;
+    opacity: 0.3;
+    transition: all 0.7s;
+}
+section.row article .card-footer a:before {
+    left: 0px;
+} 
+section.row article .card-footer a:after {
+    right: 0px;
+}
+section.row article .card-footer a:hover:before, 
+section.row article .card-footer a:hover:after {
+    width: 100%;
+}
+
+footer.row .col1 {
+  padding-bottom: 10px;
+}
+footer.row .col2 {
+  padding-top: 15px;
+}
+footer.row .copy {
+  border-top: 1px solid #000;
+}
