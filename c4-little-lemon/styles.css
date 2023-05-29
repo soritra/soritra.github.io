@@ -129,6 +129,11 @@ section.row article {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.lemon-ads {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 @keyframes textclip {
   to {
